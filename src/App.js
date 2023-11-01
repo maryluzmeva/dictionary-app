@@ -1,12 +1,24 @@
 import React from "react";
+import logo from "./logo.jpg";
 import './App.css';
+
+
+
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      Dictionary App
-      </header>
+      <div className="container">
+        <header className="App-header">
+        <img src={logo} className="App-logo img-fluid" alt="logo" />
+       </header>
+       <footer>
+        Coded by 👩🏽‍💻 
+        <a href= "https://www.linkedin.com/in/maryluz-mendez-vargas-bbb23824/" target="_blank" rel="noreferrer">Maryluz Mendez Vargas</a> 
+        {" "} and is Open-Sourced on {" "}
+        <a href="https://github.com/maryluzmeva/dictionary-app" target="_blank" rel="noreferrer">GitHub</a>
+       </footer>
+      </div>
     </div>
   );  
 }
