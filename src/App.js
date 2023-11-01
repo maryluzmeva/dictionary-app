@@ -1,9 +1,7 @@
 import React from "react";
 import logo from "./logo.jpg";
+import Dictionary from "./Dictionary";
 import './App.css';
-
-
-
 
 export default function App() {
   return (
@@ -12,6 +10,9 @@ export default function App() {
         <header className="App-header">
         <img src={logo} className="App-logo img-fluid" alt="logo" />
        </header>
+       <main>
+        <Dictionary />
+       </main>
        <footer>
         Coded by 👩🏽‍💻 
         <a href= "https://www.linkedin.com/in/maryluz-mendez-vargas-bbb23824/" target="_blank" rel="noreferrer">Maryluz Mendez Vargas</a> 
