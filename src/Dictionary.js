@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Dictionary.css";
+
 
 export default function Dictionary () {
     let [keyword, setKeyword]= useState ("");
@@ -29,6 +31,7 @@ export default function Dictionary () {
                 placeholder="Search for a word"
                 />
             </form>
+            <Results />
         </div>
     );
 }
