@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import SearchBar from "./SearchBar";
 import "./Dictionary.css";
 
 
@@ -26,6 +27,7 @@ export default function Dictionary () {
 
     return (
         <div className="Dictionary">
+            <SearchBar />
             <form onSubmit={search}>
                 <input type="search" onChange={handleKeywordChange}
                 autoFocus={true}
