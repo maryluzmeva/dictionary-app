@@ -14,10 +14,16 @@
     border: 6px outset #d496a7;
     border-radius: 35px;
     margin: 20px 0;
+    padding: 30px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-    list-style: none;
     font-size: 20px;
-    
-    
 }
 
+.Synonyms {
+    list-style: none;
+    font-weight: lighter;
+}
+.Antonyms {
+    list-style: none;
+    font-weight: lighter;
+}
