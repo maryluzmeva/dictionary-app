@@ -3,7 +3,6 @@
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: #f1dede;
     text-align: center;
-    
 }
 
 .Dictionary header {
@@ -12,13 +11,13 @@
 
 .Dictionary section {
     background-color: #d496a7;
+    border: 6px outset #d496a7;
+    border-radius: 35px;
+    margin: 20px 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     list-style: none;
-    text-align: center;
+    font-size: 20px;
+    
     
 }
 
-.Search {
-    background-color: #f1dede;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-}

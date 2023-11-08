@@ -35,7 +35,6 @@ export default function Dictionary () {
                 placeholder="Search for a word" 
                 />
                 </form>
-            <button className="btn btn-primary">Search</button>
            </div>
             <Results results={results} />
         </div>
