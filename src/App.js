@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import Dictionary from "./Dictionary";
-import './App.css';
+import "./App.css";
 
 export default function App() {
   return (

@@ -1,6 +1,24 @@
 .Dictionary {
     max-width: 400;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f1dede;
+    text-align: center;
     
 }
 
+.Dictionary header {
+    background-color: #f1dede;
+}
+
+.Dictionary section {
+    background-color: #d496a7;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    text-align: center;
+    
+}
+
+.Search {
+    background-color: #f1dede;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
