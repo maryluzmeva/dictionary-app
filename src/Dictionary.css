@@ -5,10 +5,32 @@
     text-align: center;
 }
 
-.Dictionary header {
+.Dictionary h1 {
     background-color: #f1dede;
+    text-align: center;
 }
 
+.Dictionary form {
+    display: block;
+    text-align: center;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.Dictionary input {
+    width:40%;
+    padding: 6px 4px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    box-shadow:0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+.Dictionary .Hint {
+    font-size: 15px;
+    text-align: center;
+
+}
 .Dictionary section {
     background-color: #d496a7;
     border: 6px outset #d496a7;

@@ -9,8 +9,9 @@ export default function App() {
       <div className="container">
       <header className="App-header">
           <img src={logo} className="App-logo img-fluid" alt="logo" />
-        </header>
+      </header>
        <main>
+        <h1>Search for a word</h1>
         <Dictionary />
        </main>
        <footer className="App-footer">

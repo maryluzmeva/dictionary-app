@@ -2,10 +2,15 @@
   background-color: #f1dede;
 }
 
+.App h1 {
+  text-align: center;
+}
+
 .App-header {
   margin: 30px 0;
   background-color: #f1dede;
-  
+  color: #fff;
+  padding-top: 50px;
 }
 
 .App-logo {
@@ -19,5 +24,12 @@
   font-size: 14px;
   font-weight: 500;
   margin: 30px 0;
+  padding-bottom: 30px;
 }
 
+@media (max-width: 960px) {
+  .App-header h1 {
+    font-size: 50px;
+    padding-top: 40px;
+  }
+}
