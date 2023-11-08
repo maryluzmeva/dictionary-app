@@ -29,6 +29,7 @@
 .Dictionary .Hint {
     font-size: 15px;
     text-align: center;
+    padding:10px;
 
 }
 .Dictionary section {
@@ -44,8 +45,24 @@
 .Synonyms {
     list-style: none;
     font-weight: lighter;
+    margin: 15px 0 0;
+    padding:0;
+}
+
+.Synonyms li {
+    font-size: 20px;
+    padding-right: 10px;
+    line-height: 1.5;
 }
 .Antonyms {
     list-style: none;
     font-weight: lighter;
+    margin: 15px 0 0;
+    padding:0;
+}
+
+.Antonyms li {
+    font-size: 20px;
+    padding-right: 10px;
+    line-height: 1.5;
 }

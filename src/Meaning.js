@@ -1,5 +1,4 @@
 import React from "react";
-import "./Synonyms";
 import "./Dictionary.css";
 import Synonyms from "./Synonyms";
 import Antonyms from "./Antonyms";
