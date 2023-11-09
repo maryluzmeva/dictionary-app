@@ -5,8 +5,8 @@ import Photos from "./Photos";
 import "./Dictionary.css";
 
 
-export default function Dictionary (props) {
-    let [keyword, setKeyword]= useState (" ");
+export default function Dictionary () {
+    let [keyword, setKeyword]= useState ("");
     let [results, setResults]= useState (null);
     let [loaded,setLoaded]=useState (false);
     let [photos,setPhotos]=useState (null);
@@ -26,12 +26,8 @@ export default function Dictionary (props) {
         let apiUrl=`https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
         axios.get (apiUrl).then (handleResponseDictionary);
 
-        const pexelsApiKey="73blnsRA4d8ecP3RnSW3Ey6nwaZ7IC4UoGjwAawII8WFoao4EcGs6RTe";
-        let pexelsApiUrl= `https://api.pexels.com/v1/search/?page=2&per_page=1&query=${keyword}`;
-        let headers={"Authorization":`${pexelsApiKey}`};
-        axios
-          .get (pexelsApiUrl, 
-            {headers:headers}).then (handleResponseImages);
+        let imagesApiUrl= `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
+        axios.get (imagesApiUrl).then (handleResponseImages);
     }
     
     function handleSubmit(event) {
