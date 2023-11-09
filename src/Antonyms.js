@@ -1,16 +1,21 @@
 import React from "react";
 import "./Dictionary.css";
 
-export default function Synonyms (props){
-    if (props.antonyms) {
-        return (
-            <ul className="Antonyms">
-                {props.antonyms.map (function (antonyms,index)
-                {return <li key={index}>{antonyms}</li>
-                })}
-            </ul>
-            );
-    }else{
-        return null;
-    }
+
+export default function Antonyms(props) {
+  if (props.antonyms) {
+    return (
+      <div className="Antonyms">
+        <strong>Antonyms:</strong>
+
+        <ul>
+          {props.antonyms.map(function (antonym, index) {
+            return <li key={index}>{antonym}</li>;
+          })}
+        </ul>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
