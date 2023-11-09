@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 
-export default function Dictionary () {
+export default function Dictionary (props) {
     let [keyword, setKeyword]= useState (" ");
     let [results, setResults]= useState (null);
+    let [loaded,setLoaded]=useState (false);
+    let [photos,setPhotos]=useState (null);
 
     function handleResponseDictionary (response){
 			setResults (response.data);
     }
 
     function handleResponseImages (response){
-
+      setPhotos (response.data.photos);
     }
-    function search (event) {
-        event.preventDefault ();
+    
+    function search () {
 
         //documentation: https://www.shecodes.io/learn/apis/dictionary
         const apiKey= "c71f439f65td859373faeeba102o0222";
@@ -24,22 +27,32 @@ export default function Dictionary () {
         axios.get (apiUrl).then (handleResponseDictionary);
 
         const pexelsApiKey="73blnsRA4d8ecP3RnSW3Ey6nwaZ7IC4UoGjwAawII8WFoao4EcGs6RTe";
-        let pexelsApiUrl= `https://api.pexels.com/v1/search/?page=2&per_page=1&query=${keyword}"`;
-        let headers={"Authorization":`Bearer${pexelsApiKey}`};
+        let pexelsApiUrl= `https://api.pexels.com/v1/search/?page=2&per_page=1&query=${keyword}`;
+        let headers={"Authorization":`${pexelsApiKey}`};
         axios
           .get (pexelsApiUrl, 
             {headers:headers}).then (handleResponseImages);
     }
     
+    function handleSubmit(event) {
+      event.preventDefault();
+      search();
+    }
     function handleKeywordChange (event){
         setKeyword (event.target.value);
     }
 
-    return (
-      <div className="Dictionary">
-				<h1>Search for a word</h1>
-        <div className="Search">
-          <form onSubmit={search}>
+    function load () {
+      setLoaded (true);
+      search ();
+    }
+
+    if (loaded) {
+      return (
+        <div className="Dictionary">
+				  <h1>Search for a word</h1>
+          <div className="Search">
+          <form onSubmit={handleSubmit}>
             <input 
 							type="search" 
 							onChange={handleKeywordChange}
@@ -52,6 +65,12 @@ export default function Dictionary () {
 					</div>
         </div>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
-}
+      }else{
+        load ();
+        return "Loading";
+      }
+    }
+
